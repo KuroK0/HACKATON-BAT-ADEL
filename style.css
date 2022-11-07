@@ -1,0 +1,56 @@
+body {
+  box-sizing: border-box;
+}
+#head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 15%;
+}
+.avatar {
+  right: auto;
+  width: 40%;
+  border-radius: 100%;
+}
+.h5 {
+  color: darkgrey;
+}
+#blog {
+  margin: 5px;
+}
+.sidebar-logo {
+  width: 20%;
+}
+.container_main {
+  display: flex;
+}
+.sidebar {
+  width: 20%;
+  border-right: 1px solid rgb(106, 106, 106);
+}
+.main {
+  display: block;
+}
+
+.slidebar_list {
+  font-size: 20px;
+  margin-bottom: 10%;
+}
+#main {
+  display: flex;
+}
+.btn_edit {
+  margin-left: 5%;
+  height: 20%;
+  width: 40%;
+  margin-right: 5%;
+}
+
+#stats {
+  display: flex;
+}
+.btn_pod {
+  height: 20%;
+  width: 40%;
+}
