@@ -1,3 +1,10 @@
+#setting {
+  width: 15%;
+}
+
+.modal {
+  display: none;
+}
 body {
   box-sizing: border-box;
 }
@@ -7,6 +14,7 @@ body {
   align-items: center;
   width: 50%;
   margin: 0 15%;
+  border-bottom: 1px solid grey;
 }
 .avatar {
   right: auto;
@@ -65,4 +73,7 @@ body {
 }
 #right_block {
   width: 76%;
+}
+.image{
+  width: 10%;
 }

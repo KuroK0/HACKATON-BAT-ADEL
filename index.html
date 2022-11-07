@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!-- sidebar -->
@@ -19,18 +25,25 @@
           />
         </div>
         <div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-home-page-60.png" alt="" />
           <div class="slidebar_list">Главная</div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-search-60.png" alt="" />
           <div class="slidebar_list">Поисковый запрос</div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-compass-60.png" alt="" />
           <div class="slidebar_list">Интересное</div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-messages-50.png" alt="" />
           <div class="slidebar_list">Сообщения</div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-hearts-60.png" alt="" />
           <div class="slidebar_list">Уведомления</div>
-          <img src="" alt="" />
-          <div class="slidebar_list" id="newcard">Создать</div>
+          <img class="image" src="./imgs/icons8-sum-60.png" alt="" />
+          <div
+            class="slidebar_list"
+            id="newcard"
+            data-bs-toggle="modal"
+            data-bs-target="#postsModal"
+          >
+            Создать
+          </div>
           <img src="" alt="" />
           <div class="slidebar_list">Профиль</div>
         </div>
@@ -50,8 +63,20 @@
         <div id="right_block">
           <div id="main">
             <h3>KAKA</h3>
-            <button class="btn_edit">редактировать профиль</button>
-            <img src="./imgs/settings.png" alt="Settings" id="setting" />
+            <button
+              class="btn_edit"
+              data-bs-toggle="modal"
+              data-bs-target="#editModal"
+            >
+              редактировать профиль
+            </button>
+            <img
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              src="./imgs/settings.png"
+              alt="Settings"
+              id="setting"
+            />
           </div>
           <div id="stats">
             <p class="pishki"><strong>0</strong> Публикаций</p>
@@ -69,8 +94,145 @@
       </div>
 
       <!-- HEAD -->
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <!-- <div class="modal-content"> -->
+          <div class="modal-body form-control">
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 text-center">asda</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="editModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Профиль</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              placeholder="URL-Image"
+              class="form-control text-dark m-2"
+              id="avatar"
+            />
+            <input
+              type="text"
+              placeholder="Введите свой ник"
+              class="form-control text-dark m-2"
+              id="nickname"
+            />
+            <input
+              type="text"
+              placeholder="Введите своё имя и фамилию"
+              class="form-control text-dark m-2"
+              id="name"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Закрыть
+            </button>
+            <button type="button" class="btn btn-primary" id="editBtn">
+              Редактировать
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="postsModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Создание поста
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              class="form-control m-1"
+              placeholder="URL-image"
+              id="imageUrl"
+            />
+            <input
+              type="text"
+              class="form-control m-1"
+              placeholder="Описание поста"
+              id="postText"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Закрыть
+            </button>
+            <button type="button" class="btn btn-primary" id="newPost">
+              Создать пост
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="./main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
