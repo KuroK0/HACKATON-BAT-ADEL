@@ -14,78 +14,154 @@
     />
   </head>
   <body>
-    <!-- HEAD -->
-    <div id="head">
-      <div id="left_block"><img src="" alt="" /></div>
-      <div id="right_block">
-        <div id="main">
-          <h3>name</h3>
-          <button>редактировать профиль</button>
+    <!-- sidebar -->
+    <div class="container_main">
+      <div class="sidebar">
+        <div>
           <img
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-            src="./imgs/settings.png"
-            alt="Settings"
-            id="setting"
+            class="sidebar-logo"
+            src="https://assets.stickpng.com/images/5a4e432a2da5ad73df7efe7a.png"
+            alt=""
           />
         </div>
-        <div id="stats">
-          <p>0 Публикаций</p>
-          <button>0 Подписчики</button>
-          <button>0 Подписки</button>
+        <div>
+          <div class="slidebar_list">Главная</div>
+          <div class="slidebar_list">Поисковый запрос</div>
+          <div class="slidebar_list">Интересное</div>
+          <div class="slidebar_list">Сообщения</div>
+          <div class="slidebar_list">Уведомления</div>
+          <div class="slidebar_list" id="newcard">Создать</div>
+          <div class="slidebar_list">Профиль</div>
         </div>
-        <div id="blog">
-          <h4>nickname</h4>
-          <h5>Личный блог</h5>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus, esse.
-          </p>
+      </div>
+
+      <!-- sidebar end -->
+      <!-- HEAD -->
+      <div id="head">
+        <div id="left_block">
+          <img
+            class="avatar"
+            src="https://i.pinimg.com/474x/c6/ba/8a/c6ba8a58383853b79f536f198aee335b.jpg"
+            alt=""
+          />
+        </div>
+        <div id="right_block">
+          <div id="main">
+            <h3>KAKA</h3>
+            <button
+              class="btn_edit"
+              data-bs-toggle="modal"
+              data-bs-target="#editModal"
+            >
+              редактировать профиль
+            </button>
+            <img
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              src="./imgs/settings.png"
+              alt="Settings"
+              id="setting"
+            />
+          </div>
+          <div id="stats">
+            <p>0 Публикаций</p>
+            <button class="btn_pod">0 Подписчики</button>
+            <button class="btn_pod">0 Подписки</button>
+          </div>
+          <div id="blog">
+            <h4 class="h4">nickname</h4>
+            <h5 class="h5">Личный блог</h5>
+            <p class="p">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, esse.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEAD -->
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <!-- <div class="modal-content"> -->
+          <div class="modal-body form-control">
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 border-bottom border-dark text-center">asda</div>
+            <div class="p-2 text-center">asda</div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- HEAD -->
+
+
 
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="editModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <!-- <div class="modal-content"> -->
-        <div class="modal-body form-control">
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 border-bottom border-dark text-center">asda</div>
-          <div class="p-2 text-center">asda</div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Профиль</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              placeholder="URL-Image"
+              class="form-control text-dark m-2"
+              id="avatar"
+            />
+            <input
+              type="text"
+              placeholder="Введите свой ник"
+              class="form-control text-dark m-2"
+              id="nickname"
+            />
+            <input
+              type="text"
+              placeholder="Введите своё имя и фамилию"
+              class="form-control text-dark m-2"
+              id="name"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Закрыть
+            </button>
+            <button type="button" class="btn btn-primary" id="editBtn">Редактировать</button>
+          </div>
         </div>
       </div>
     </div>
-
-
-    <!-- public -->
-
-    <div id="posts">
-        <h4>Публикации</h4>
-        <div id="photos">
-            <img id="add" src="./imgs/icons8-plus-192.png" alt="ADD">
-        </div>
-    </div>
-
-    <!-- public -->
-
-    
 
     <script src="./main.js"></script>
     <script

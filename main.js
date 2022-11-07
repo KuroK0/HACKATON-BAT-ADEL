@@ -1,14 +1,16 @@
-let setting = document.querySelector("#setting");
-let modal = document.querySelector(".modal");
+let ava = document.querySelector(".avatar");
+let h3 = document.querySelector("h3");
+let name = document.querySelector(".h4");
+// ? кнопка редактрирования
+let editBtn = document.querySelector("#editBtn");
 
-setting.addEventListener("click", function () {
-  //   let modal = bootstrap.Modal.getInstance(exampleModal);
-  // modal.style.display =  'block'
-  //   modal.hide();
+// ? инпуты
+let inpAva = document.querySelector("#avatar");
+let inpH3 = document.querySelector("#nickname");
+let inpName = document.querySelector("#name");
+
+editBtn.addEventListener("click", function render() {
+  ava.innerHTML = `<img src = "${inpAva}">`;
+  h3.innerText = inpH3.value;
+  name.innerText = inpName.value;
 });
-
-let add = document.querySelector('#add');
-
-add.addEventListener("click", function(){
-    
-})
