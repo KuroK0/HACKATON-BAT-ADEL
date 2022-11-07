@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- sidebar -->
+    <div class="container_main">
+      <div class="sidebar">
+        <div>
+          <img
+            class="sidebar-logo"
+            src="https://assets.stickpng.com/images/5a4e432a2da5ad73df7efe7a.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <div class="slidebar_list">Главная</div>
+          <div class="slidebar_list">Поисковый запрос</div>
+          <div class="slidebar_list">Интересное</div>
+          <div class="slidebar_list">Сообщения</div>
+          <div class="slidebar_list">Уведомления</div>
+          <div class="slidebar_list" id="newcard">Создать</div>
+          <div class="slidebar_list">Профиль</div>
+        </div>
+      </div>
+
+      <!-- sidebar end -->
+      <!-- HEAD -->
+      <div id="head">
+        <div id="left_block">
+          <img
+            class="avatar"
+            src="https://i.pinimg.com/474x/c6/ba/8a/c6ba8a58383853b79f536f198aee335b.jpg"
+            alt=""
+          />
+        </div>
+        <div id="right_block">
+          <div id="main">
+            <h3>KAKA</h3>
+            <button class="btn_edit">редактировать профиль</button>
+            <img src="./imgs/settings.png" alt="Settings" id="setting" />
+          </div>
+          <div id="stats">
+            <p>0 Публикаций</p>
+            <button class="btn_pod">0 Подписчики</button>
+            <button class="btn_pod">0 Подписки</button>
+          </div>
+          <div id="blog">
+            <h4 class="h4">nickname</h4>
+            <h5 class="h5">Личный блог</h5>
+            <p class="p">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, esse.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEAD -->
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
 </html>
