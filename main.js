@@ -17,6 +17,8 @@ editBtn.addEventListener("click", function render() {
 let API = "http://localhost:8000/cards";
 
 let newcard = document.querySelectorO("#newcard");
-newcard.addEventListener("click", () => {
-    
+newPost.addEventListener("click", () => {
+    if(!postText.value || !imageUrl) {
+      alert('Введите что нибудь')
+    }
 });

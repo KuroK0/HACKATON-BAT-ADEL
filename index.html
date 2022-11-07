@@ -25,18 +25,25 @@
           />
         </div>
         <div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-home-page-60.png" alt="" />
           <div class="slidebar_list">Главная</div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-search-60.png" alt="" />
           <div class="slidebar_list">Поисковый запрос</div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-compass-60.png" alt="" />
           <div class="slidebar_list">Интересное</div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-messages-50.png" alt="" />
           <div class="slidebar_list">Сообщения</div>
-          <img src="" alt="" />
+          <img class="image" src="./imgs/icons8-hearts-60.png" alt="" />
           <div class="slidebar_list">Уведомления</div>
-          <img src="" alt="" />
-          <div class="slidebar_list" id="newcard">Создать</div>
+          <img class="image" src="./imgs/icons8-sum-60.png" alt="" />
+          <div
+            class="slidebar_list"
+            id="newcard"
+            data-bs-toggle="modal"
+            data-bs-target="#postsModal"
+          >
+            Создать
+          </div>
           <img src="" alt="" />
           <div class="slidebar_list">Профиль</div>
         </div>
@@ -115,8 +122,6 @@
       </div>
     </div>
 
-
-
     <!-- Modal -->
     <div
       class="modal fade"
@@ -164,7 +169,60 @@
             >
               Закрыть
             </button>
-            <button type="button" class="btn btn-primary" id="editBtn">Редактировать</button>
+            <button type="button" class="btn btn-primary" id="editBtn">
+              Редактировать
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="postsModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Создание поста
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              class="form-control m-1"
+              placeholder="URL-image"
+              id="imageUrl"
+            />
+            <input
+              type="text"
+              class="form-control m-1"
+              placeholder="Описание поста"
+              id="postText"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Закрыть
+            </button>
+            <button type="button" class="btn btn-primary" id="newPost">
+              Создать пост
+            </button>
           </div>
         </div>
       </div>
